@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="username-input" id="usernameModal">
+        <h3>Enter Your Name</h3>
+        <input type="text" id="usernameField" placeholder="Your name..." maxlength="20">
+        <br>
+        <button onclick="setUsername()">Join Chat</button>
+    </div>
+
+    <div class="connection-status disconnected" id="connectionStatus">
+        Connecting...
+    </div>
+
+    <header class="chat-header">
+        <div class="avatar">
+            <span>💬</span>
+        </div>
+        <div class="chat-info">
+            <h2>Group Chat</h2>
+            <div class="status" id="onlineStatus">Connecting...</div>
+        </div>
+    </header>
+
+    <div class="messages-container" id="messagesContainer">
+        <div class="typing-indicator" id="typingIndicator">
+            Someone is typing...
+        </div>
+    </div>
+
+    <div class="input-container">
+        <textarea 
+            class="message-input" 
+            id="messageInput" 
+            placeholder="Type your message..."
+            rows="1"
+        ></textarea>
+        <button class="send-btn" id="sendBtn" onclick="sendMessage()">
+            <span>➤</span>
+        </button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
